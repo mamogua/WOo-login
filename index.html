@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BO — Вхід в акаунт</title>
+    <img src="https://ibb.co/yFrYhPT6">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-box {
+            background: #111;
+            padding: 40px;
+            width: 350px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.1);
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 25px;
+            border: none;
+            background: #222;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            background: #1d9bf0;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background: #1888d4;
+        }
+
+        .small-link {
+            display: block;
+            margin-top: 15px;
+            color: #1d9bf0;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .small-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-box">
+    <div class="logo">BO</div>
+
+    <form id="loginForm">
+        <input type="text" id="login" class="input-field" placeholder="Email або логін" required>
+        <input type="password" id="pass" class="input-field" placeholder="Пароль" required>
+
+        <button class="login-btn">Увійти</button>
+    </form>
+
+    <a href="#" class="small-link">Забули пароль?</a>
+    <a href="#" class="small-link">Створити акаунт</a>
+</div>
+
+<script>
+    document.querySelector("#loginForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        // Можеш додати перевірку логіна і пароля тут
+
+        // Якщо все добре — перекидаємо на головну
+        window.location.href = "index.html";
+    });
+</script>
+
+</body>
+</html>
